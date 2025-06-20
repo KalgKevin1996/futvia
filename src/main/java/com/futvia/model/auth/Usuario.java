@@ -1,14 +1,15 @@
 package com.futvia.model.auth;
 
-import com.futvia.model.auth.Rol;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Set;
 
 @Entity
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Usuario {
 
@@ -16,11 +17,13 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String nombre;
 
+    @Column(nullable = false)
     private String apellido;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
@@ -35,4 +38,9 @@ public class Usuario {
             inverseJoinColumns = @JoinColumn(name = "rol_id")
     )
     private Set<Rol> roles;
+
+    // Si el usuario es LIGA_MANAGER, se le puede asignar una liga específica
+    @ManyToOne
+    @JoinColumn(name = "liga_id")
+    private com.futvia.model.liga.Liga ligaAsignada;
 }
