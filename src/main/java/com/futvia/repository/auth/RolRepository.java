@@ -1,4 +1,4 @@
-package com.futvia.repository;
+package com.futvia.repository.auth;
 
 import com.futvia.model.auth.Rol;
 import org.springframework.data.jpa.repository.JpaRepository;

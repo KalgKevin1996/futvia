@@ -1,7 +1,7 @@
 package com.futvia.service.auth;
 
 import com.futvia.model.auth.Usuario;
-import com.futvia.repository.UsuarioRepository;
+import com.futvia.repository.auth.UsuarioRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
