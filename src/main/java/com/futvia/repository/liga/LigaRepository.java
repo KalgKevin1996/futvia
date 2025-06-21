@@ -1,4 +1,7 @@
 package com.futvia.repository.liga;
 
-public class LigaRepository {
+import com.futvia.model.liga.Liga;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LigaRepository extends JpaRepository<Liga, Long> {
 }
