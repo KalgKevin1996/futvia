@@ -1,5 +1,6 @@
 package com.futvia.model.equipo;
 
+import com.futvia.model.auth.Usuario;
 import com.futvia.model.liga.CategoriaCompetencia;
 import com.futvia.model.liga.Liga;
 import jakarta.persistence.*;
@@ -36,5 +37,11 @@ public class Equipo {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private CategoriaCompetencia categoria;
+
+    // 📞 Información de contacto
+    private String contacto;
+
+    // 👤 Encargado del equipo (usuario del sistema)
+    private String encargado;
 
 }

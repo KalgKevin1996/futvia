@@ -13,4 +13,6 @@ public class EquipoFormDTO {
     private String colorPrimario;
     private Long ligaId;
     private Long categoriaId;
+    private String contacto;
+    private String encargado;
 }

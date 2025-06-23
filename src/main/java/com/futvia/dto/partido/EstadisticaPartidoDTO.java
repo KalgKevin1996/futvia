@@ -15,6 +15,6 @@ public class EstadisticaPartidoDTO {
     private int tarjetasRojas;
     private int minutosJugados;
     private double calificacion;
-    private String jugadorNombreCompleto;
+    private String nombreJugador;
     private Long partidoId;
 }

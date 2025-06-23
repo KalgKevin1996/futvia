@@ -14,4 +14,6 @@ public class EquipoDTO {
     private String colorPrimario;
     private String ligaNombre;
     private String categoriaNombre;
+    private String contacto;           // Ej: número o correo
+    private String encargado;          // Nombre completo del responsable
 }
